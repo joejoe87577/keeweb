@@ -83,7 +83,8 @@ const DefaultAppSettings = {
 
     onedrive: true, // enable OneDrive integration
     onedriveClientId: null, // custom OneDrive client id
-    onedriveClientSecret: null // custom OneDrive client secret
+    onedriveClientSecret: null, // custom OneDrive client secret
+    onedriveTenant: 'common' // tenant for authentication in multi tenant azure environment
 };
 
 export { DefaultAppSettings };
