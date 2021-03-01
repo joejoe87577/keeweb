@@ -221,7 +221,7 @@ class StorageOneDrive extends StorageBase {
     _getOAuthConfig() {
         let clientId = this.appSettings.onedriveClientId;
         let clientSecret = this.appSettings.onedriveClientSecret;
-        let clientTenant = this.appSettings.onedriveTenant;
+        const clientTenant = this.appSettings.onedriveTenant;
         if (!clientId) {
             if (Features.isLocal) {
                 ({ id: clientId, secret: clientSecret } = OneDriveApps.Local);
@@ -230,8 +230,8 @@ class StorageOneDrive extends StorageBase {
             }
         }
         return {
-            url: 'https://login.microsoftonline.com/'+clientTenant+'/oauth2/v2.0/authorize',
-            tokenUrl: 'https://login.microsoftonline.com/'+clientTenant+'/oauth2/v2.0/token',
+            url: 'https://login.microsoftonline.com/' + clientTenant + '/oauth2/v2.0/authorize',
+            tokenUrl: 'https://login.microsoftonline.com/' + clientTenant + '/oauth2/v2.0/token',
             scope: 'files.readwrite offline_access',
             clientId,
             clientSecret,
